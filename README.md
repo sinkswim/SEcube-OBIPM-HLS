@@ -7,8 +7,8 @@ The group project consisted in:
 * High-level synthesis of the SystemC modules with Cadence Stratus HLS and Xilinx Vivado HLS;
 * Integration of the various generated RTL designs in the Lattice Diamond SW package and compilation of the bitstream file to be deployed on the SEcube SoC.
 
-<object data="http://yoursite.com/the.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="http://yoursite.com/the.pdf">
-        This browser does not support PDFs. Please download the PDF to view it: <a href="http://yoursite.com/the.pdf">Download PDF</a>.</p>
+<object data="https://github.com/sinkswim/SEcube-OBIPM-HLS/blob/master/Project%2013%20Final%20Report.pdf" type="application/pdf" width="700px" height="700px">
+    <embed src="https://github.com/sinkswim/SEcube-OBIPM-HLS/blob/master/Project%2013%20Final%20Report.pdf">
+        This browser does not support PDFs. Please download the PDF to view it: <a href="https://github.com/sinkswim/SEcube-OBIPM-HLS/blob/master/Project%2013%20Final%20Report.pdf">Download PDF</a>.</p>
     </embed>
 </object>
