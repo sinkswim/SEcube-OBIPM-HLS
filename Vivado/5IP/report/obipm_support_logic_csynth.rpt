@@ -1,0 +1,116 @@
+
+
+================================================================
+== Vivado HLS Report for 'obipm_support_logic'
+================================================================
+* Date:           Tue May 30 01:14:11 2017
+
+* Version:        2016.4 (Build 1756540 on Mon Jan 23 19:31:01 MST 2017)
+* Project:        SysC_try
+* Solution:       solution1
+* Product family: azynq
+* Target device:  xa7z030fbg484-1i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      1.97|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    0|    0|    0|    0|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       0|      4|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       -|      -|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|      -|
+|Register         |        -|      -|       -|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|       0|      4|
++-----------------+---------+-------+--------+-------+
+|Available        |      530|    400|  157200|  78600|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|       0|   ~0  |
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------+----------+-------+---+----+------------+------------+
+    | Variable Name| Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------+----------+-------+---+----+------------+------------+
+    |acked         |   icmp   |      0|  0|   2|           5|           1|
+    |irq           |   icmp   |      0|  0|   2|           5|           1|
+    +--------------+----------+-------+---+----+------------+------------+
+    |Total         |          |      0|  0|   4|          10|           2|
+    +--------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------+-----+-----+---------+--------------------+---------+
+|       RTL Ports      | Dir | Bits| Protocol|    Source Object   |  C Type |
++----------------------+-----+-----+---------+--------------------+---------+
+|ack_ip                | out |    5|  ap_vld |       ack_ip       | pointer |
+|ack_ip_ap_vld         | out |    1|  ap_vld |       ack_ip       | pointer |
+|interrupt_ip          |  in |    5| ap_none |    interrupt_ip    | pointer |
+|interrupt_cpu         | out |    1|  ap_vld |    interrupt_cpu   | pointer |
+|interrupt_cpu_ap_vld  | out |    1|  ap_vld |    interrupt_cpu   | pointer |
+|interrupt_internal    |  in |    1| ap_none | interrupt_internal | pointer |
+|ack_internal          |  in |    5| ap_none |    ack_internal    | pointer |
+|acked                 | out |    1|  ap_vld |        acked       | pointer |
+|acked_ap_vld          | out |    1|  ap_vld |        acked       | pointer |
+|irq                   | out |    1|  ap_vld |         irq        | pointer |
+|irq_ap_vld            | out |    1|  ap_vld |         irq        | pointer |
++----------------------+-----+-----+---------+--------------------+---------+
+

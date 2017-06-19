@@ -1,0 +1,134 @@
+
+
+================================================================
+== Vivado HLS Report for 'obipm'
+================================================================
+* Date:           Tue May 30 01:14:12 2017
+
+* Version:        2016.4 (Build 1756540 on Mon Jan 23 19:31:01 MST 2017)
+* Project:        SysC_try
+* Solution:       solution1
+* Product family: azynq
+* Target device:  xa7z030fbg484-1i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      7.00|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    2|    5|    3|    6|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +------------------------------------------+----------------------------+-----+-----+-----+-----+---------+
+        |                                          |                            |  Latency  |  Interval | Pipeline|
+        |                 Instance                 |           Module           | min | max | min | max |   Type  |
+        +------------------------------------------+----------------------------+-----+-----+-----+-----+---------+
+        |StgValue_35_obipm_enabler_fu_180          |obipm_enabler               |    0|    0|    0|    0|   none  |
+        |StgValue_41_obipm_packet_switcher_fu_236  |obipm_packet_switcher       |    0|    0|    0|    0|   none  |
+        |StgValue_61_obipm_support_logic_fu_292    |obipm_support_logic         |    0|    0|    0|    0|   none  |
+        |grp_obipm_interrupt_controller_fu_348     |obipm_interrupt_controller  |    2|    2|    2|    2|   none  |
+        +------------------------------------------+----------------------------+-----+-----+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       -|      -|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       2|   2031|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|      -|
+|Register         |        -|      -|       -|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|       2|   2031|
++-----------------+---------+-------+--------+-------+
+|Available        |      530|    400|  157200|  78600|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|   ~0   |      2|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    +------------------------------------------+----------------------------+---------+-------+---+------+
+    |                 Instance                 |           Module           | BRAM_18K| DSP48E| FF|  LUT |
+    +------------------------------------------+----------------------------+---------+-------+---+------+
+    |StgValue_35_obipm_enabler_fu_180          |obipm_enabler               |        0|      0|  0|    13|
+    |grp_obipm_interrupt_controller_fu_348     |obipm_interrupt_controller  |        0|      0|  2|     1|
+    |StgValue_41_obipm_packet_switcher_fu_236  |obipm_packet_switcher       |        0|      0|  0|  2013|
+    |StgValue_61_obipm_support_logic_fu_292    |obipm_support_logic         |        0|      0|  0|     4|
+    +------------------------------------------+----------------------------+---------+-------+---+------+
+    |Total                                     |                            |        0|      0|  2|  2031|
+    +------------------------------------------+----------------------------+---------+-------+---+------+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+-----+------------+-------------------+--------------+
+|     RTL Ports     | Dir | Bits|  Protocol  |   Source Object   |    C Type    |
++-------------------+-----+-----+------------+-------------------+--------------+
+|clk                |  in |    1| ap_ctrl_hs |    obipm::obipm   | return value |
+|rst                |  in |    1| ap_ctrl_hs |    obipm::obipm   | return value |
+|row_0_b            |  in |   16|   ap_none  |      row_0_b      |    pointer   |
+|data_b_in          |  in |   16|   ap_none  |     data_b_in     |    pointer   |
+|data_b_out         | out |   16|   ap_vld   |     data_b_out    |    pointer   |
+|address_b          | out |    6|   ap_vld   |     address_b     |    pointer   |
+|w_enable_b         | out |    1|   ap_vld   |     w_enable_b    |    pointer   |
+|r_enable_b         | out |    1|   ap_vld   |     r_enable_b    |    pointer   |
+|generic_enable_b   | out |    1|   ap_vld   |  generic_enable_b |    pointer   |
+|data_ip_in         |  in |   80|   ap_none  |     data_ip_in    |    pointer   |
+|data_ip_out        | out |   80|   ap_vld   |    data_ip_out    |    pointer   |
+|address_ip         |  in |   30|   ap_none  |     address_ip    |    pointer   |
+|w_enable_ip        |  in |    5|   ap_none  |    w_enable_ip    |    pointer   |
+|r_enable_ip        |  in |    5|   ap_none  |    r_enable_ip    |    pointer   |
+|generic_enable_ip  |  in |    5|   ap_none  | generic_enable_ip |    pointer   |
+|enable_ip          | out |    5|   ap_vld   |     enable_ip     |    pointer   |
+|ack_ip             | out |    5|   ap_vld   |       ack_ip      |    pointer   |
+|interrupt_ip       |  in |    5|   ap_none  |    interrupt_ip   |    pointer   |
+|interrupt_cpu      | out |    1|   ap_vld   |   interrupt_cpu   |    pointer   |
++-------------------+-----+-----+------------+-------------------+--------------+
+
