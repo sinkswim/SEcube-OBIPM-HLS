@@ -9,6 +9,6 @@ The group project consisted in:
 
 <object data="https://github.com/sinkswim/SEcube-OBIPM-HLS/blob/master/Project%2013%20Final%20Report.pdf" type="application/pdf" width="700px" height="700px">
     <embed src="https://github.com/sinkswim/SEcube-OBIPM-HLS/blob/master/Project%2013%20Final%20Report.pdf">
-        This browser does not support PDFs. Please download the PDF to view it: <a href="https://github.com/sinkswim/SEcube-OBIPM-HLS/blob/master/Project%2013%20Final%20Report.pdf">Download PDF</a>.</p>
+        This PDF contains a thorough description of the project: <a href="https://github.com/sinkswim/SEcube-OBIPM-HLS/blob/master/Project%2013%20Final%20Report.pdf">Download PDF</a>.</p>
     </embed>
 </object>
